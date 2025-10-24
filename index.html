@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BEXLO WEBSITE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <img src="logo_L.png" alt="BARAA_BEXLO LOGO" class="logo-img" />
+    <nav class="buttons">
+      <ul>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <a href="#" id="language-toggle" onclick="toggleLanguage()">Ar</a>
+        <li><a href="#"></a></li>
+        <a href="anthor_color.html">
+        <img src="night.png" alt="Button" style="cursor: pointer; width: 35px; height: 35px;">
+</a>
+
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+  <div class="main-container">
+    <img src="Bexlo.png" alt="Bexlo Character" class="character" />
+
+<div class="intro-text">
+  <h2 id="greeting">Hello, My Name Is</h2>
+  <h1 id="name">ALBARAA</h1>
+  <em id="description">Game Developer | Programmer | web Developer</em>
+    </div>
+  </div>
+
+ <div class="my-games">
+  <h2 id="games">my games</h2>
+
+
+  <div class="the-games">
+<a href="https://baraaq2010.itch.io/lincker-fighter" target="_blank">
+  <img src="lol.png" alt="tintlo lino --<my first game>--" style="width:200px; height:auto;">
+    </a>
+
+  </div>
+ </div>
+
+ <div class="my-website">
+  <h2>Learned languages</h2>
+</div>
+  <div class="the-games">
+  <img src="R.png" alt="html --<HTML>--" style="width:200px; height:auto;">
+    </a>
+  <img src="N.jpg" alt="html --<CSS>--" style="width:170px;; height:auto;">
+    </a>
+  <img src="J.webp" alt="html --<JAVASICREPT>--" style="width:170px;; height:auto;">
+    </a>
+  <img src="L.webp" alt="html --<JAVASICREPT>--" style="width:300px;; height:auto;">
+    </a>
+</div>
+
+<div class="my-website">
+  <h2 id="website">my wibsite</h2>
+  <div class="lol">
+      <h1>SOON</h1>
+  </div>
+
+</div>
+<div class="my-website">
+  <h2>My school projects</h2>
+  <div class="lol">
+      <h1>SOON</h1>
+  </div>
+</div>
+
+<div class="my-website">
+  <h2>My certificates</h2>
+  <div class="lol">
+      <h1>SOON</h1>
+  </div>
+</div>
+
+<div class="my-website">
+  <h2>CV</h2>
+  <div class="lol">
+      <h1>SOON</h1>
+  </div>
+</div>
+
+<div class="my-website">
+  <h2>Favorite things</h2>
+  <h3>color : red  <img src="red.jpg" style="width:30px; height:auto;">
+    </a></h3>
+</div>
+
+<script>
+  let isEnglish = true;
+
+  function toggleLanguage() {
+    if (isEnglish) {
+      document.getElementById("greeting").innerText = "السلام عليكم اسمي هو";
+      document.getElementById("name").innerText = "البراء";
+      document.getElementById("description").innerText = "مطور ألعاب | مبرمج | مطور مواقع";
+      document.getElementById("games").innerText = "العابي";
+      document.getElementById("website").innerText = "مواقعي";
+    } else {
+      document.getElementById("greeting").innerText = "Hello, My Name Is";
+      document.getElementById("name").innerText = "ALBARAA";
+      document.getElementById("description").innerText = "Game Developer | Programmer | Content Creator";
+      document.getElementById("games").innerText = "games";
+      document.getElementById("website").innerText = "my wibsite";
+    }
+    isEnglish = !isEnglish;
+  }
+</script>
+
+
+
+</body>
+</html>
