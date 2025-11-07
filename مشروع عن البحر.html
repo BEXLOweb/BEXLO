@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشروع درس خيرات البحر</title>
+    <style>
+        /* التنسيقات العامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2980, #26d0ce);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* تنسيق صفحة الغلاف */
+        .cover-page {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cover-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+        
+        .cover-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        
+        .student-info {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px 40px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            margin-top: 30px;
+        }
+        
+        /* تنسيق صفحة المحتوى */
+        .content-page {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        
+        .page-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #1a2980;
+            border-bottom: 3px solid #26d0ce;
+            padding-bottom: 10px;
+        }
+        
+        .fish-list {
+            list-style-type: none;
+        }
+        
+        .fish-item {
+            background: #f8f9fa;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #26d0ce;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .fish-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fish-name {
+            font-size: 1.5rem;
+            color: #1a2980;
+            margin-bottom: 10px;
+        }
+        
+        .fish-name-en {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .fish-description {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        /* تنسيق الأزرار */
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            background: #1a2980;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #26d0ce;
+        }
+        
+        /* إخفاء الصفحات */
+        .page {
+            display: none;
+        }
+        
+        .active {
+            display: block;
+        }
+        
+        /* تنسيق الاستجابة للشاشات المختلفة */
+        @media (max-width: 768px) {
+            .cover-title {
+                font-size: 2.5rem;
+            }
+            
+            .cover-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .fish-name {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- صفحة الغلاف -->
+        <div id="cover" class="page active">
+            <div class="cover-page">
+                <h1 class="cover-title">مشروع درس خيرات البحر</h1>
+                <h2 class="cover-subtitle">رحلة استكشافية لعالم البحار المذهل</h2>
+                <div class="student-info">
+                    <p>اسم الطالب: [البراء عادل الجبالي]</p>
+                    <p>اسم المعلمة: [حليمة العرفي]</p>
+                </div>
+                <button class="btn" onclick="showPage('content')">استكشف الأنواع</button>
+            </div>
+        </div>
+        
+        <!-- صفحة المحتوى -->
+        <div id="content" class="page">
+            <div class="content-page">
+                <h2 class="page-title">أنواع الأسماك المذهلة في البحر</h2>
+                
+                <ul class="fish-list">
+                    <li class="fish-item">
+                        <h3 class="fish-name">1. سمك القرش الكبير الأفقي</h3>
+                        <p class="fish-name-en">Great Hammerhead Shark</p>
+                        <p class="fish-description">يتميز هذا القرش برأسه الفريد الذي يشبه المطرقة، مما يمنحه مجال رؤية أوسع. يعيش في المياه الاستوائية الدافئة ويعد من أكبر أنواع قروش المطرقة.</p>
+<img src="download (1).webp"   width="100" height="100" alt="وصف الصورة">
+                    </li>
+                    
+                    <li class="fish-item">
+                        <h3 class="fish-name">2. أنقرة العملاق</h3>
+                        <p class="fish-name-en">Goliath Grouper</p>
+                        <p class="fish-description">يعتبر من أكبر الأسماك الموجودة في الشعاب المرجانية، حيث يمكن أن يصل وزنه إلى 360 كجم. يتميز بجسمه الضخم وفمه الكبير.</p>
+<img src="download (2).webp"   width="100" height="100" alt="وصف الصورة">
+                    </li>
+
+                    
+                    <li class="fish-item">
+                        <h3 class="fish-name">3. سمكة قرش الحوت</h3>
+                        <p class="fish-name-en">Whale Shark</p>
+                        <p class="fish-description">أكبر أنواع الأسماك في العالم، يمكن أن يصل طوله إلى 12 مترًا. رغم حجمه الضخم، فهو يتغذى على العوالق والكائنات الصغيرة.</p>
+<img src="Screenshot_٢٠٢٥-٠٣-١٥-٠٠-٤٧-٢١-٥٩_96b26121e545231a3c569311a54cda96-1280x720-1.png"   width="100" height="100" alt="وصف الصورة">
+                    </li>
+                    
+                    <li class="fish-item">
+                        <h3 class="fish-name">4. تونة القرن</h3>
+                        <p class="fish-name-en">Giant Bluefin Tuna</p>
+                        <p class="fish-description">تعتبر من أسرع الأسماك في المحيط، ويمكن أن تصل سرعتها إلى 70 كم/ساعة. تزن هذه التونة العملاقة حتى 680 كجم.</p>
+<img src="R.jpg"   width="100" height="100" alt="وصف الصورة">
+                    </li>
+                    
+                    <li class="fish-item">
+                        <h3 class="fish-name">5. سمك الكوي</h3>
+                        <p class="fish-name-en">Coelacanth</p>
+                        <p class="fish-description">يعتبر هذا النوع من الأحافير الحية، حيث كان يُعتقد أنه انقرض منذ 65 مليون سنة حتى تم اكتشافه حيًا في عام 1938.</p>
+<img src="download.webp"   width="100" height="100" alt="وصف الصورة">
+                    </li>
+                </ul>
+                
+                <div class="nav-buttons">
+                    <button class="btn" onclick="showPage('cover')">العودة للغلاف</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // دالة للتنقل بين الصفحات
+        function showPage(pageId) {
+            // إخفاء جميع الصفحات
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // إظهار الصفحة المطلوبة
+            document.getElementById(pageId).classList.add('active');
+            
+            // التمرير لأعلى الصفحة
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>

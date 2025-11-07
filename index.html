@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="موقع البراء - مطور ألعاب ومواقع ويب" />
+  <title>BEXLO | البراء - مطور ألعاب ومواقع ويب</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- شريط التنقل -->
+  <header>
+    <div class="header-container">
+      <img src="logo_L.png" alt="شعار البراء" class="logo-img" />
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link">الرئيسية</a></li>
+          <li class="nav-item"><a href="#games" class="nav-link">ألعابي</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">مشاريعي</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">مهاراتي</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">اتصل بي</a></li>
+          <li class="nav-item">
+            <button id="language-toggle" class="lang-btn" onclick="toggleLanguage()">En</button>
+          </li>
+          <li class="nav-item">
+            <a href="anthor_color.html" class="theme-toggle" aria-label="تبديل السمة">
+              <img src="night.png" alt="تبديل السمة" class="theme-icon">
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="فتح القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- القسم الرئيسي -->
+  <main>
+    <!-- قسم المقدمة -->
+    <section id="home" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="intro-text">
+            <h2 id="greeting" class="greeting">مرحباً، اسمي هو</h2>
+            <h1 id="name" class="name">البراء</h1>
+            <div class="typing-container">
+              <span id="description" class="description"></span>
+              <span class="cursor">|</span>
+            </div>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">استعرض مشاريعي</a>
+              <a href="#contact" class="btn btn-secondary">تواصل معي</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="Bexlo.png" alt="شخصية بكسلو" class="character" />
+          <div class="floating-elements">
+            <div class="floating-element el-1">🎮</div>
+            <div class="floating-element el-2">💻</div>
+            <div class="floating-element el-3">🚀</div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>مرر للأسفل</span>
+        <div class="arrow"></div>
+      </div>
+    </section>
+
+    <!-- قسم الألعاب -->
+    <section id="games" class="section games-section">
+      <div class="container">
+        <h2 id="games-title" class="section-title">ألعابي</h2>
+        <div class="games-grid">
+          <div class="game-card">
+            <a href="https://baraaq2010.itch.io/lincker-fighter" target="_blank" class="game-link">
+              <div class="game-image">
+                <img src="lol.png" alt="لعبة لينكر فايتر" />
+                <div class="game-overlay">
+                  <span class="play-text">تشغيل اللعبة</span>
+                </div>
+              </div>
+              <div class="game-info">
+                <h3 class="game-title">لينكر فايتر</h3>
+                <p class="game-desc">أول لعبة قمت بتطويرها</p>
+              </div>
+            </a>
+          </div>
+          <!-- يمكن إضافة المزيد من الألعاب هنا -->
+          <div class="game-card coming-soon">
+            <div class="game-image">
+              <img src="placeholder.jpg" alt="لعبة قريباً" />
+              <div class="coming-soon-overlay">
+                <span>قريباً</span>
+              </div>
+            </div>
+            <div class="game-info">
+              <h3 class="game-title">مشروع جديد</h3>
+              <p class="game-desc">قيد التطوير</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم المهارات -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <h2 id="skills-title" class="section-title">اللغات والتقنيات</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-icon">
+              <img src="R.png" alt="HTML" />
+            </div>
+            <h3 class="skill-name">HTML</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="90"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">
+              <img src="N.jpg" alt="CSS" />
+            </div>
+            <h3 class="skill-name">CSS</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="85"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">
+              <img src="J.webp" alt="JavaScript" />
+            </div>
+            <h3 class="skill-name">JavaScript</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="80"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon">
+              <img src="L.webp" alt="تقنيات أخرى" />
+            </div>
+            <h3 class="skill-name">تقنيات أخرى</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="75"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم المشاريع المدرسية -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <h2 id="projects-title" class="section-title">مشاريعي المدرسية</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <a href="مشروع عن البحر.html" class="project-link">
+              <div class="project-image">
+                <img src="lol2.png" alt="مشروع عن البحر" />
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">مشروع عن البحر</h3>
+                <p class="project-desc">مشروع مدرسي يتناول موضوع البيئة البحرية</p>
+              </div>
+            </a>
+          </div>
+          <!-- يمكن إضافة المزيد من المشاريع هنا -->
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الشهادات والسيرة الذاتية -->
+    <section class="section certificates-section">
+      <div class="container">
+        <div class="certificates-grid">
+          <div class="certificate-card">
+            <h2 id="certificates-title" class="section-title">شهاداتي</h2>
+            <div class="coming-soon-box">
+              <div class="soon-icon">📜</div>
+              <h3>قريباً</h3>
+              <p>سيتم إضافة الشهادات قريباً</p>
+            </div>
+          </div>
+          <div class="certificate-card">
+            <h2 id="cv-title" class="section-title">السيرة الذاتية</h2>
+            <div class="coming-soon-box">
+              <div class="soon-icon">📄</div>
+              <h3>قريباً</h3>
+              <p>سيتم إضافة السيرة الذاتية قريباً</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الأشياء المفضلة -->
+    <section class="section favorites-section">
+      <div class="container">
+        <h2 id="favorites-title" class="section-title">أشياءي المفضلة</h2>
+        <div class="favorites-grid">
+          <div class="favorite-item">
+            <h3 id="color-title">اللون المفضل</h3>
+            <div class="color-display">
+              <div class="color-box red"></div>
+              <span>الأحمر</span>
+            </div>
+          </div>
+          <div class="favorite-item">
+            <h3 id="game-title">اللعبة المفضلة</h3>
+            <div class="game-display">
+              <img src="athor.png" alt="ماين كرافت" />
+              <span>ماين كرافت</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title">تواصل معي</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <p>هل تريد التعاون في مشروع أو لديك استفسار؟</p>
+            <p>لا تتردد في التواصل معي!</p>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link">📧 البريد الإلكتروني</a>
+            <a href="#" class="social-link">🐦 تويتر</a>
+            <a href="#" class="social-link">💼 لينكد إن</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- تذييل الصفحة -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          <p>☁️ ---------- النهاية ---------- ☁️</p>
+          <p>© 2023 البراء. جميع الحقوق محفوظة.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
